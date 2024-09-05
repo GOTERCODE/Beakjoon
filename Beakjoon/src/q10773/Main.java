@@ -1,21 +1,35 @@
 package q10773;
 
+import java.util.Scanner;
+import java.util.Stack;
+
 public class Main {
 
-	public class ArrayStack {
-		int size;
-		int top = -1;
-		Object[] stack;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-		public ArrayStack(int size) {
-			this.size = size;
-			stack = new Object[size];
+		Stack<Integer> stack = new Stack<>();
+
+		int tc = sc.nextInt();
+		int sum = 0;
+		for (int i = 0; i < tc; i++) {
+			int n = sc.nextInt();
+
+			if (n != 0) {
+				stack.push(n);
+			} else if (n == 0) {
+				stack.pop();
+			}
+
+		}
+		int stacksize = stack.size();
+
+		for (int i = 0; i < stacksize; i++) {
+
+			sum += stack.pop();
 		}
 
-	}
-
-	public static void main(String[] args) {
-
+		System.out.println(sum);
 	}
 
 }

@@ -5,7 +5,9 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.ArrayDeque;
+import java.util.Collection;
+import java.util.Deque;
 
 public class Main {
 
@@ -13,41 +15,24 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+//		Deque<String> dq = new ArrayDeque<>();
+
 		int N = Integer.parseInt(br.readLine());
-
-		int[] arr = new int[N];
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) {
-
-			arr[i] = Integer.parseInt(st.nextToken());
-		}
+		String[] A = br.readLine().split(" ");
+		
+		
 
 		int M = Integer.parseInt(br.readLine());
-		int[] arr2 = new int[M];
-
-		st = new StringTokenizer(br.readLine());
-
-		for (int i = 0; i < M; i++) {
-			arr2[i] = Integer.parseInt(st.nextToken());
-		}
+		String[] B = br.readLine().split(" ");
 		
-		
-
-		for (int i = 0; i < M; i++) {
+		for(int i=0;i<N;i++) {
 			
-			boolean b = false;
+			for(int j=0;j<M;j++) {
+				if(B[i].equals(A.clone()[))
+			}
 			
-			for (int j = 0; j <N; j++) {
-				if (arr2[i] == arr[j]) {
-					b = true;
-				}
-			}
-			if (b == true) {
-				System.out.println("1");
-			} else {
-				System.out.println("0");
-			}
 		}
+
 	}
 
 }
